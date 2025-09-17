@@ -1,6 +1,7 @@
-class Notas {
-    constructor(nota ){
-        this.nota = nota
+class Nota {
+    constructor(valor, materia){
+        this.valor = valor
+        this.materia = materia
     }
     
      mostrarNotas() {
@@ -8,3 +9,5 @@ class Notas {
          Nota: ${this.nota}.`
     }
 }
+
+module.exports = Nota

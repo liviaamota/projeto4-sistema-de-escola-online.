@@ -1,14 +1,16 @@
-const Usuario = require("./projeto-escola/class/Usuario")
-const Aluno = require("./projeto-escola/class/Aluno")
-const Professor = require("./projeto-escola/class/Professor")
-const Coordenador = require("./projeto-escola/class/Coordenador")
-const Disciplina = require("./projeto-escola/class/Disciplina")
-const Turma = require("./projeto-escola/class/Turma")
+
+const Aluno = require("./class/Aluno")
+const Professor = require("./class/Professor")
+const Coordenador = require("./class/Coordenador")
+const Disciplina = require("./class/Disciplina")
+const Turma = require("./class/Turma")
+const Nota = require("./class/Nota")
 
 
 const aluno = new Aluno("Maria", 16)
 const professor = new Professor("João", 35)
 const coordenador = new Coordenador("Ana", 40)
+
 
 console.log(aluno.acessoPainel())
 console.log("=============================")
@@ -25,5 +27,11 @@ const turmaA = new Turma("1ºA")
 turmaA.adicionarDisciplina(matematica)
 turmaA.adicionarAluno(aluno)
 
-console.log(turmaA.disciplina)
-console.log(turmaA.nomeAluno)
+console.log(turmaA.disciplinas)
+console.log(turmaA.alunos)
+
+
+const nota1 = new Nota(8.5, matematica)
+aluno.adicionarNota(nota1)
+
+console.log(aluno.notas)

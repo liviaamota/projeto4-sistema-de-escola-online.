@@ -1,22 +1,29 @@
+const util = require("node:util")
 class Turma {
-    constructor(nome ){
-        this.nome = nome
-        this.disciplina = []
-        this.nomeAluno = []
+    #alunos
+    constructor(turma ){
+        this.turma = turma
+        this.disciplinas = []
+        this.#alunos = []
     }
     
-     mostrarNome() {
+     mostrarTurma() {
         return ` 
-         Turma: ${this.nome}.`
+         Turma: ${this.turma}.`
     }
 
-  adicionarDisciplina(disciplina) {
-    this.disciplina.push(disciplina)   
+  adicionarDisciplina(Disciplina) {
+    this.disciplinas.push(Disciplina)   
   }
 
-  adicionarAluno() {
-     this.nomeAluno.push("livia")
+  adicionarAluno(aluno) {
+     this.#alunos.push(aluno)
   }
+
+  
+    [util.inspect.custom]() {
+        return `Aluno { nome: ${this.nome}, idade: ${this.idade}}`
+    }
 
 }
 module.exports = Turma
