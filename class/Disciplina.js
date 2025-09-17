@@ -3,6 +3,10 @@ class Disciplina {
      this.nome = nome
      this.cargaHoraria = cargaHoraria
     }
+
+    adicionarDisciplina() {
+        
+    }
 }
 
 module.exports = Disciplina

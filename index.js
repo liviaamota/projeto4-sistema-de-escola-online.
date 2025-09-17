@@ -25,5 +25,5 @@ const turmaA = new Turma("1ºA")
 turmaA.adicionarDisciplina(matematica)
 turmaA.adicionarAluno(aluno)
 
-console.log(turmaA.disciplinas)
-console.log(turmaA.alunos)
+console.log(turmaA.disciplina)
+console.log(turmaA.nomeAluno)

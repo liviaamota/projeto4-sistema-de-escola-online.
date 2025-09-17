@@ -2,6 +2,7 @@ class Turma {
     constructor(nome ){
         this.nome = nome
         this.disciplina = []
+        this.nomeAluno = []
     }
     
      mostrarNome() {
@@ -9,8 +10,12 @@ class Turma {
          Turma: ${this.nome}.`
     }
 
-  adicionarDisciplina() {
-    this.disciplina.push()   
+  adicionarDisciplina(disciplina) {
+    this.disciplina.push(disciplina)   
+  }
+
+  adicionarAluno() {
+     this.nomeAluno.push("livia")
   }
 
 }
